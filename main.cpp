@@ -5,6 +5,8 @@
 
 using namespace std;
 
+const string input_filename = "/home/ej/input";
+
 int main()
 {
     ofstream ofs1("equal.csv");
@@ -13,7 +15,7 @@ int main()
     ofstream ofs2("inequal.csv");
     ofs2 << "file1,file2" << endl;
     ofs2.close();
-    Get_filename temp1("/home/ej/input");
+    Get_filename temp1(input_filename);
     vector<string> dir_list = temp1.get_dir_name_list();
     for (int i = 0; i < dir_list.size(); i++)
     {
